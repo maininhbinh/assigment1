@@ -1,0 +1,46 @@
+<div class="content mt-5 px-5">
+    <div class="new mb-5">
+        <div class="tiltel mb-4">
+            <span class="fw-bold" style="font-size: 1.5rem;">Khóa học Pro</span>
+        </div>
+        <div class="list-cuser" style="min-height: 200px;">
+            <div class="cuser d-flex flex-wrap ">
+                <div class="product w-25 px-3 " style="min-width: 250px;" ng-repeat="item in khoaHocPro">
+                    <a href="#!/bookingPro/{{item.id}}" class="">
+                        <span class="fw-bold " id="booking">Đặt khóa học</span>
+                        <img src="{{item.img}}" alt="" class="img-fluid rounded-4">
+                    </a>
+                    <div class="tieu-de my-2 fw-bold ">
+                        <span>{{item.name}}</span>
+                    </div>
+                    <div class="price">
+                           <span class="text-danger fw-bold "> {{item.price}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- khóa học free -->
+    <div class="free mb-5">
+        <div class="tiltel mb-4">
+            <span class="fw-bold" style="font-size: 1.5rem;">Khóa học Free</span>
+        </div>
+        <div class="list-cuser" style="min-height: 200px;">
+            <div class="cuser  d-flex flex-wrap">
+                <div class="product w-25 px-3 mb-3" style="min-width: 250px;" ng-repeat="item in khoaHocNomar">
+                    <a href="#!/bookingNomar/{{item.id}}" class="">
+                        <span class="fw-bold " id="booking">Đặt khóa học</span>
+                        <img src="{{item.img}}" alt="" class="img-fluid rounded-4">
+                    </a>
+                    <div class="tieu-de my-2 fw-bold ">
+                        <span>{{item.name}}</span>
+                    </div>
+                    <div class="viewer d-flex align-items-center " >
+                           <i class="fa-regular fa-eye px-2"></i>
+                           <span>{{item.view}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

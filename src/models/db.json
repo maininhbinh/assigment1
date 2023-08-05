@@ -1,0 +1,107 @@
+{
+  "khoaHocPro":[
+      {
+          "id":1,
+          "name":"HTMl CSS Pro",
+          "price":"1.299.000",
+          "img":"src/public/images/62f13d2424a47.png"
+      },
+      {
+          "id":2,
+          "name":"JavaScript Pro",
+          "price": "",
+          "img":"src/public/images/62f13cb607b4b.png"
+      },
+      {
+          "id":3,
+          "name":"NextJS Pro",
+          "price": "",
+          "img":"src/public/images/62f13cb607b4b.png"
+      },
+      {
+          "id":4,
+          "name":"NodeJS Pro",
+          "price": "",
+          "img":"src/public/images/62f13cb607b4b.png"
+      }
+  ],
+  "khoaHocNomar":[
+      {
+          "id":1,
+          "name":"Kiến Thức Nhập Môn IT",
+          "view":"111.861",
+          "img":"src/public/images/7.png"
+      },
+      {
+          "id":2,
+          "name":"Lập trình C++ cơ bản, nâng cao",
+          "view":"12.708",
+          "img":"src/public/images/8.png"
+      },
+      {
+          "id":3,
+          "name":"HTML CSS từ Zero đến Hero",
+          "view":"167.839",
+          "img":"src/public/images/2.png"
+      },
+      {
+          "id":4,
+          "name":"Responsive Với Grid System",
+          "view":"38.339",
+          "img":"src/public/images/3.png"
+      },
+      {
+          "id":5,
+          "name":"Lập trình JavaScript cơ bản",
+          "view":"112.811",
+          "img":"src/public/images/1.png"
+      },
+      {
+          "id":6,
+          "name":"Lập trình JavaScript nâng cao",
+          "view":"111.861",
+          "img":"src/public/images/12.png"
+      },
+      {
+          "id":7,
+          "name":"Xây Dựng Website với ReactJS",
+          "view":"111.861",
+          "img":"src/public/images/13.png"
+      }
+  ],
+  "slideShow":[
+      {
+          "id":1,
+          "tilte":"Học ReactJS Miễn Phí!",
+          "content":"Khóa học ReactJS từ cơ bản tới nâng cao. Kết quả của khóa học này là bạn có thể làm hầu hết các dự án thường gặp với ReactJS.",
+          "img":"src/public/images/Banner_web_ReactJS.png"
+      },
+      {
+          "id":2,
+          "tilte":"Thành Quả của Học Viên",
+          "content":"Để đạt được kết quả tốt trong mọi việc ta cần xác định mục tiêu rõ ràng cho việc đó. Học lập trình cũng không là ngoại lệ.",
+          "img":"src/public/images/Banner_01_2.png"
+      },
+      {
+          "id":3,
+          "tilte":"Khóa học HTML CSS Pro",
+          "content":"Khóa học ReactJS từ cơ bản tới nâng cao. Kết quả của khóa học này là bạn có thể làm hầu hết các dự án thường gặp với ReactJS.",
+          "img":"src/public/images/6308a6bf603a4.png"
+      }
+  ],
+  "khoa_Hoc_da_dang_ki": [
+
+  ],
+  "thong_tin_dang_ki": [
+        {
+            "id": 1,
+            "name": "Mai Ninh Binh",
+            "chung_minh_thu": "09837465774",
+            "email": "ninhbinh@gmail.com",
+            "phone": "0386541876",
+            "ngay_sinh": "14/11/2003",
+            "sex": "nam",
+            "thanh_toan": "tiền mặt"
+        }
+  ]
+}

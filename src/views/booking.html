@@ -1,0 +1,253 @@
+<section class="text-center text-lg-start">
+  <style>
+    .cascading-right {
+      margin-right: -50px;
+    }
+
+    @media (max-width: 991.98px) {
+      .cascading-right {
+        margin-right: 0;
+      }
+    }
+    .input-from{
+      width: 100%;
+      border:none solid #e8e8e8;
+      height: 45px;
+      position: relative;
+      box-shadow: 0px 0px 20px 0px #e8e8e8;
+    }
+    .input-from .input{
+      height: 100%;
+    }
+    .input-from .input input{
+      border: none;
+      outline: none;
+      width: 85% ;
+      height: 100%;
+    }
+    .input-from .input input[type="date"]{
+      appearance: none;
+      width: 102%;
+      color: gray;
+    }
+    .input-from .input label{
+      transform: translateY(-50%);
+      top: 50%;
+      color: gray;
+      transition: ease-in-out .2s;
+      cursor:text;
+      user-select: none !important;
+      font-weight: bold;
+    }
+
+    .input-from .input input:focus + label{
+      top: -2px;
+    }
+
+    .input-from .input input:not(:placeholder-shown) + label{
+      top: -2px;
+    }
+    .input-from + .input-from{
+      margin-top: 30px;
+    }
+
+    .input-from .fa-solid{
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .sex .radio input[type="radio"] {
+      appearance: none;
+      -webkit-appearance: none;
+      width: 20px;
+      height: 20px;
+      border: 1px solid #e8e8e8;
+      box-shadow:  0px 0px 20px 0px #e8e8e8;
+      border-radius: 50%;
+      margin-right: 10px;
+      background-color: transparent;
+      position: relative;
+      top: 6px;
+    }
+
+    .sex .radio input[type="radio"]:checked::before {
+      content: "";
+      display: block;
+      width: 12px;
+      height: 12px;
+      background-color: #ca8489;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: appear 0.8s;
+    }
+
+    .sex .radio label {
+      color: gray;
+    }
+    
+    .radio + .radio{
+      margin-left: 10px;
+    }
+
+    .eke{
+      flex: 1;
+      height: 1px;
+      background-color: gray;
+    }
+    .hinh-thuc{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .hinh-thuc input[type="radio"]{
+      appearance: none;
+    }
+
+    .hinh-thuc label input[type="radio"]:checked{
+      color: #ca8489;
+    }
+    .hinh-thuc label{
+      display: flex;
+      width: 100%;
+      height: 45px;
+      border: none solid #e8e8e8;
+      border-radius: 50px;
+      box-shadow: 0px 0px 20px 0px #e8e8e8;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px 0 20px;
+    }
+    .hinh-thuc label span{
+      font-weight: bold;
+    }
+    .submit{
+      padding: 8px;
+      box-shadow: 0px 0px 20px 0px #0093E9;
+      border: none solid #e8e8e8;
+
+      background-color: #0093E9;
+      background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+      border:none;
+      font-weight: bold;
+    }
+    .show{
+      animation: show 0.3s;
+      color: red;
+    }
+
+    @keyframes show{
+      25%{
+        transform: translateX(-10px);
+      }
+      50%{
+        transform: translateX(10px);
+      }
+      75%{
+        transform: translateX(-10px);
+      }
+      100%{
+        transform: translateX(0px);
+      }
+    }
+
+    .error{
+      font-weight: bold;
+    }
+</style>
+
+  <!-- Jumbotron -->
+  <div class="container py-4 my-5">
+    <div class="row g-0 align-items-center">
+      <div class="col-lg-6 mb-5 mb-lg-0">
+        <div class="card cascading-right" style="
+            background: hsla(0, 0%, 100%, 0.55);
+            backdrop-filter: blur(30px);
+            padding:50px 150px 50px 150px;
+            ">
+            <form ng-submit="check()">
+              <h2 class="text-center fw-bold pb-5">{{index.name}}</h2>
+              <div>
+                  <div class="input-from errorName rounded-5 px-4 " >
+                    <div class="input">
+                        <input type="text" name="name" id="name" class="h-100  position-absolute " placeholder=" " ng-model="name" ng-click="remove('errorName','nhập họ và tên')">
+                        <label for="name" class="position-absolute" id="errorName">nhập họ và tên</label>
+                    </div>
+                    <i class="fa-solid fa-user position-absolute"></i>
+                  </div>
+                  <div class="input-from errorCmt rounded-5 px-4 " >
+                    <div class="input">
+                      <input type="text" name="cmt" id="cmt" class="h-100  position-absolute " placeholder=" " ng-model="cmt" ng-click="remove('errorCmt' , 'chứng minh thư')">
+                      <label for="cmt" class="position-absolute" id="errorCmt">chứng minh thư</label>
+                    </div>
+                    <i class="fa-solid fa-passport position-absolute"></i>
+                  </div>
+                  <div class="input-from errorEmail rounded-5 px-4 " >
+                    <div class="input">
+                      <input type="text" name="email" id="email" class="h-100  position-absolute " placeholder=" " ng-model="email" ng-click="remove('errorEmail', 'email')">
+                      <label for="email" class="position-absolute" id="errorEmail">email</label>
+                    </div>
+                    <i class="fa-solid fa-envelope position-absolute "></i>
+                  </div>
+                  <div class="input-from errorPhone rounded-5 px-4 " >
+                    <div class="input">
+                      <input type="text" name="phone" id="phone" class="h-100  position-absolute " placeholder=" " ng-model="phone" ng-click="remove('errorPhone', 'số điện thoại')">
+                      <label for="phone" class="position-absolute " id="errorPhone">số điện thoại</label>
+                    </div>
+                    <i class="fa-solid fa-phone position-absolute "></i>
+                  </div>  
+                  <div class="input-from errorDate rounded-5 px-4">
+                    <div class="input">
+                      <input type="text" name="date" id="date" class="h-100  position-absolute " placeholder=" " ng-model="date" ng-click="remove('errorDate', 'ngày sinh')">
+                      <label for="date" class="position-absolute " id="errorDate">ngày sinh</label>
+                    </div>
+                    <i class="fa-solid fa-calendar-days position-absolute "></i>
+                  </div>
+                  <div class="sex d-flex mt-4 position-relative">
+                    <div class="radio" ng-click="removeRadio('errorGt')">
+                      <input type="radio" id="Nam" name="gioi_tinh" value="nam" ng-model="gioi_tinh">
+                      <label for="Nam" id="errorGt" class="fw-bold ">Nam</label>
+                    </div>
+                    <div class="radio" ng-click="removeRadio('errorGt')">
+                      <input type="radio" id="nu" name="gioi_tinh" value="nữ" ng-model="gioi_tinh">
+                      <label for="nu" id="errorGt" class="fw-bold ">nữ</label>
+                    </div>
+                  </div>
+                  <div class="thanh-toan_paren mt-4 position-relative ">
+                    <div class="thanh_toan d-flex align-items-center">
+                      <div class="eke"></div>
+                      <span class="fw-bold px-2" id="errorTt" style="color: gray;">thanh toán</span>
+                      <div class="eke"></div>
+                    </div>
+                    <div class="hinh-thuc w-100 ">
+                      <label for="tienmat" style="flex: 1;" ng-click="removeRadio('errorTt')">
+                        <input type="radio" name="thanh_toan" id="tienmat" value="tiền mặt" class="fa-solid fa-money-bill" ng-model="thanh_toan">
+                        <span id="input_tt">tiền mặt</span>
+                      </label>
+                      <label for="chuyen_khoan" style="flex: 1;" ng-click="removeRadio('errorTt')">
+                        <input type="radio" name="thanh_toan" id="chuyen_khoan" value="chuyển khoản" class="fa-solid fa-building-columns" ng-model="thanh_toan">
+                        <span id="input_tt">chuyển khoản</span>
+                      </label>
+                    </div>
+                  </div>
+                  <button class="submit mt-5 w-100 text-center rounded-5">
+                      đăng ký ngay
+                  </button>
+              </div>
+              
+            </form>
+        </div>
+      </div>
+
+      <div class="col-lg-6 mb-5 mb-lg-0">
+        <img src="{{index.img}}" class="w-100 rounded-4 shadow-4" alt="" />
+      </div>
+      
+    </div>
+  </div>
+  <!-- Jumbotron -->
+</section>
+<!-- Section: Design Block -->

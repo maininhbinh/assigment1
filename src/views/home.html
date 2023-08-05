@@ -1,0 +1,76 @@
+
+<div class="slideShow rounded-5 position-relative">
+    <div id="carouselExampleCaptions" class="carousel slide  data-bs-ride="carousel" style=" height: 270px;">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner" >
+            <div class="carousel-item active rounded-5" style="background: linear-gradient(to right, rgb(40, 119, 250), rgb(103, 23, 205));" ng-repeat="item in slideShow">
+                <div class="slide d-flex justify-content-between align-items-center p-5">
+                    <div class="text-light ">
+                        <h5 class="">{{item.tilte}}</h5>
+                        <p>{{item.content}}</p>
+                    </div>
+                    <img src="{{item.img}}" class="d-block w-25" alt="...">
+                </div>
+            </div>
+        </div>
+        <button class="position-absolute bottom-50 border-0 rounded-5 " type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev" style="width: 50px; height: 50px; transform: translateY(50%); left: -20px;">
+            <i class="fa-solid fa-angle-right "  aria-hidden="true" style="transform: rotate(180deg);"></i>
+            
+        </button>
+        <button class="position-absolute bottom-50 border-0 rounded-5" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next" style="width: 50px; height: 50px; transform: translateY(50%); right: -20px;">
+            <i class="fa-solid fa-angle-right"  aria-hidden="true"></i>
+        </button>
+    </div>
+</div>
+
+<!-- thông tin giới thiệu khác -->
+<div class="content mt-5 px-5">
+    <div class="new mb-5">
+        <div class="tiltel mb-4">
+            <span class="fw-bold" style="font-size: 1.5rem;">Khóa học Pro</span>
+        </div>
+        <div class="list-cuser" style="min-height: 250px;">
+            <div class="cuser d-flex flex-wrap ">
+                <div class="product w-25 px-3 " style="min-width: 250px;" ng-repeat="item in khoaHocPro">
+                    <a href="#!/bookingPro/{{item.id}}" class="">
+                        <span class="fw-bold">Đặt khóa học</span>
+                        <img src="{{item.img}}" alt="" class="img-fluid rounded-4">
+                    </a>
+                    <div class="tieu-de my-2 fw-bold ">
+                        <span>{{item.name}}</span>
+                    </div>
+                    <div class="price">
+                           <span class="text-danger fw-bold "> {{item.price}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- khóa học free -->
+    <div class="free mb-5">
+        <div class="tiltel mb-4">
+            <span class="fw-bold" style="font-size: 1.5rem;">Khóa học Free</span>
+        </div>
+        <div class="list-cuser" style="min-height: 200px;">
+            <div class="cuser  d-flex flex-wrap">
+                <div class="product w-25 px-3 mb-3" style="min-width: 250px;" ng-repeat="item in khoaHocNomar">
+                    <a href="#!/bookingNomar/{{item.id}}" class="">
+                        <span class="fw-bold" id="booking">Đặt khóa học</span>
+                        <img src="{{item.img}}" alt="" class="img-fluid rounded-4">
+                    </a>
+                    <div class="tieu-de my-2 fw-bold ">
+                        <span>{{item.name}}</span>
+                    </div>
+                    <div class="viewer d-flex align-items-center " >
+                        <i class="fa-regular fa-eye px-2"></i>
+                        <span>{{item.view}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container" style="height: 1000px;">
+        <table class="table fw-bold ">
+            <thead>
+                <tr>
+                    <td>
+                        id
+                    </td>
+                    <td>
+                        name
+                    </td>
+                    <td>
+                        chứng minh thư
+                    </td>
+                    <td>
+                        email
+                    </td>
+                    <td>
+                        phone
+                    </td>
+                    <td>
+                        ngày sinh
+                    </td>
+                    <td>
+                        giới tính
+                    </td>
+                    <td>
+                        thanh toán
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in register">
+                    <td>
+                        {{item.id}}
+                    </td>
+                    <td>
+                        {{item.name}}
+                    </td>
+                    <td>
+                        {{item.chung_minh_thu}}
+                    </td>
+                    <td>
+                        {{item.email}}
+                    </td>
+                    <td>
+                        {{item.phone}}
+                    </td>
+                    <td>
+                        {{item.ngay_sinh}}
+                    </td>
+                    <td>
+                        {{item.sex}}
+                    </td>
+                    <td>    
+                        {{item.thanh_toan}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
